@@ -367,24 +367,24 @@
 // каждого символа на противоположный
 // Например, если строка "JavaScript", то на выходе должна быть строка "jAVAsCRIPT"
 
-const changeCase = function (string = '') {
-    const letters = string.split('');
-    let invertedString = '';
+// const changeCase = function (string = '') {
+//     const letters = string.split('');
+//     let invertedString = '';
 
-    for (const letter of letters) {
-        const isInLowerCase = letter === letter.toLowerCase();
+//     for (const letter of letters) {
+//         const isInLowerCase = letter === letter.toLowerCase();
 
-        invertedString += isInLowerCase
-            ? letter.toUpperCase()
-            : letter.toLowerCase();
-    }
+//         invertedString += isInLowerCase
+//             ? letter.toUpperCase()
+//             : letter.toLowerCase();
+//     }
     
-return invertedString;
-};
+// return invertedString;
+// };
 
-console.log(changeCase('JavaScript'));
-console.log(changeCase('JAVAscript'));
-console.log(changeCase('JavaSCRIPT'));
+// console.log(changeCase('JavaScript'));
+// console.log(changeCase('JAVAscript'));
+// console.log(changeCase('JavaSCRIPT'));
 
 // когда ты будешь использовать эту функцию ты просто ее вызываешь по имени понятно что она делате
 // и если тебе нужно понять как она работает
@@ -403,12 +403,12 @@ console.log(changeCase('JavaSCRIPT'));
 // Напиши функцию slugify(string) которая получает строку и возвращает URL-slug
 // Строка состоит только из букв и пробелов
 
-const slugily = function (string) {
-    return string.toLowerCase().split(' ').join('-');
-};
+// const slugily = function (string) {
+//     return string.toLowerCase().split(' ').join('-');
+// };
 
-console.log(slugily('Top 10 benefits of React framework'));
-console.log(slugily('Azure Static Web Apps are Awesome'));
+// console.log(slugily('Top 10 benefits of React framework'));
+// console.log(slugily('Azure Static Web Apps are Awesome'));
 
 // Програмирование это практика нужно решать заадачи иначе не работает
 // Все все выучат просто придет какое-то время
@@ -478,24 +478,46 @@ console.log(slugily('Azure Static Web Apps are Awesome'));
 // Функция должна вернуть новый массив, в которм будут только те аргументы,
 // начиная со второго,
 // для которых есть аналог в оригинальном массиве.
-const filterNumbers = function (array, ...args) {
-    console.log('array', array);
-    console.log('args', args);
-    const uniqueElements = [];
+// const filterNumbers = function (array, ...args) {
+//     console.log('array', array);
+//     console.log('args', args);
+//     const uniqueElements = [];
 
-    for (const element of array) {
-        if (args.includes(element)) {
-            uniqueElements.push(element);
+//     for (const element of array) {
+//         if (args.includes(element)) {
+//             uniqueElements.push(element);
 
-            console.log(`${element} есть везде!`);
-        }
-    }
-    return uniqueElements;
-};
+//             console.log(`${element} есть везде!`);
+//         }
+//     }
+//     return uniqueElements;
+// };
 
-console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8));
-console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15));
-console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64));
+// console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8));
+// console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15));
+// console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64));
 
 // каждая функция делает свою маленькую задачу и не пытайтесь сделать функцию которая делает все
 // иначе это будет муссорка из кода в которой никто ничего не поймет что там написанно
+
+// const add = function (a, b) {
+
+//     return a + b;
+// }
+
+// // add(2, 3)
+// console.log(add(2, 3))
+
+const calculateTotalPrice = function (items) {
+    // console.log(items)
+
+    let total = 0
+
+    for (const item of items) {
+        total += item
+    }
+    return total
+}
+
+console.log(calculateTotalPrice([1, 2, 3]))
+console.log(calculateTotalPrice([100, 200, 300, 400, 500]))
