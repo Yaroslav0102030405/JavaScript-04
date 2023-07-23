@@ -508,16 +508,102 @@
 // // add(2, 3)
 // console.log(add(2, 3))
 
-const calculateTotalPrice = function (items) {
-    // console.log(items)
+// const calculateTotalPrice = function (items) {
+//     // console.log(items)
 
-    let total = 0
+//     let total = 0
 
-    for (const item of items) {
-        total += item
+//     for (const item of items) {
+//         total += item
+//     }
+//     return total
+    
+// }
+// const r1 = calculateTotalPrice([1, 2, 3])
+// console.log(`Общая сумма покупок ${r1}`)
+// console.log(calculateTotalPrice([100, 200, 300, 400, 500]))
+
+// Пример с неявным возвратом без ретерна
+// const logItems = function (items) {
+// for (const item of items) {
+//     console.log(item)
+// }
+
+// }
+
+// logItems(['Mango', 'Kiwi', 'Poly', 'Ajax'])
+
+
+const logins = ['Mango', 'Kiwi', 'Poly', 'Ajax']
+
+const findLogin = function (alllogins, loginToFind) {
+    for (const login of alllogins) {
+    if (login === loginToFind) {
+    return `Пользователь ${loginToFind} найден`
     }
-    return total
+    }
+    return `Пользователь ${loginToFind} не найден`
+}
+    
+console.log(findLogin(logins, 'Mango'))
+console.log(findLogin(logins, 'Mango1'))
+console.log(findLogin(logins, 'Poly'))
+console.log(findLogin(logins, 'Mango2'))
+
+
+const findSmallesNumber = function (numbers) {
+    let smalesNumber = numbers[0]
+
+    for (const number of numbers) {
+     if(number < smalesNumber) {
+        smalesNumber = number
+     }
+    }
+
+    return smalesNumber
 }
 
-console.log(calculateTotalPrice([1, 2, 3]))
-console.log(calculateTotalPrice([100, 200, 300, 400, 500]))
+console.log(findSmallesNumber([3, 8, 12, -2, 15]))
+
+
+const slugify = function (string) {
+    return string.toLowerCase().split(' ').join('-')
+}
+
+console.log(slugify('Top 18 benefits of React framework'))
+
+
+// ...rest операция рэст - она берет несколько элементов и собирает их в массив
+
+// const add = function (...args) {
+//     console.log(args)
+//     let total = 0
+
+//     for (const arg of args) {
+//     total += arg
+//     }
+   
+//     return total
+// }
+
+// console.log(add(1, 2, 3))
+// console.log(add(1, 2, 3, 4))
+
+const falterNumbers = function ( ...args) {
+    console.log(array)
+    console.log(args)
+    const uniqueElements = []
+
+    for (const element of array) {
+        console.log(element)
+        if (args.includes(element)) {
+            uniqueElements.push(element)
+            console.log(`${element} есть везде!`)
+        }
+    }
+    return uniqueElements
+
+}
+
+console.log(falterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8))
+console.log(falterNumbers([10, 15, 25, 30], 23, 30, 18, 15))
