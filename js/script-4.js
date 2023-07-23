@@ -589,7 +589,7 @@ console.log(slugify('Top 18 benefits of React framework'))
 // console.log(add(1, 2, 3))
 // console.log(add(1, 2, 3, 4))
 
-const falterNumbers = function ( ...args) {
+const falterNumbers = function (array, ...args) {
     console.log(array)
     console.log(args)
     const uniqueElements = []
