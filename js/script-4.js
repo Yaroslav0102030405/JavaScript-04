@@ -1,15 +1,15 @@
 /*
-* План занятия
-*
-* - Знакомство с функциями
-* - Стек вызовов
-* - Поиск ошибок
-* - Практика
-*/
+ * План занятия
+ *
+ * - Знакомство с функциями
+ * - Стек вызовов
+ * - Поиск ошибок
+ * - Практика
+ */
 
 /*
-* Функции
-*/
+ * Функции
+ */
 
 // Функцию можна записать в переменную
 // Получается что в переменной будет лежать ссылка на функцию
@@ -28,7 +28,7 @@
 //     console.log('Выполняется функция add');
 
 //     return a + b
-    // тут можеть быть одно значение число массив строка или другая цункция
+// тут можеть быть одно значение число массив строка или другая цункция
 // Вы где-то в памяти создали функцию и положили ее и она ничего не делает (этап обьявления функции)
 
 // Чтобы вызвать функцию вы пишите имя переменной и после имени ставите пкзатые скобочки
@@ -47,16 +47,15 @@
 // 99% случаев функция что-то принимает и что-то возвращает
 
 /*
-* return
-*/
+ * return
+ */
 // Чтобы что-то вернтуть из функции есть такая инструкия деректива return (возврат)
-
 
 // Где вы поставите retutn там функция прекратить прекратит выполнение
 // const fn = function (value) {
 //     console.log(1)
 //     console.log(2)
-    
+
 //     if (value < 50) {
 //         return 'Меньше чем 50'
 //     }
@@ -74,8 +73,8 @@
 // return - возвращает одно значение функцию число массив обьект строку буль. Он не может несколько значений выполнить
 
 /*
-* Стек вызовов
-*/
+ * Стек вызовов
+ */
 
 // Стек вызовов - это механизм благодаря которому вобще работают функции в JS
 // const FnA = function () {
@@ -97,8 +96,8 @@
 // FnC();
 
 /*
-* Второй вариант
-*/
+ * Второй вариант
+ */
 // const FnA = function () {
 //     console.log('Выполняется функция А');
 // };
@@ -124,8 +123,8 @@
 // console.log('Лог после вызова функции C');
 
 /*
-* Третий вариант Функция вызывается внутри другой функции
-*/
+ * Третий вариант Функция вызывается внутри другой функции
+ */
 // const FnA = function () {
 //     console.log('Выполняется функция А');
 
@@ -158,8 +157,8 @@
 // и когда глубже нет других вызовов (в нашем случае последний это консоль лог то оно начинает снимать со стека)
 
 /*
-* Stack trace
-*/
+ * Stack trace
+ */
 // Stack trace - Поиск ошибок в функциях
 // const FnA = function () {
 //     console.log('Выполняется функция А');
@@ -202,8 +201,8 @@
 // с сегодняшнего дня большинство кода это будут функции
 
 /*
-* Задача 1
-*/
+ * Задача 1
+ */
 // Напиши функцию calculateTotalPrice(items)
 // которая принимает массив цен (чисел) и возвращает их сумму
 
@@ -235,11 +234,10 @@
 // console.log(calculateTotalPrice([100, 200, 300]));
 
 /*
-* Задача 2
-*/
+ * Задача 2
+ */
 // 95% случаев йункции что-то возвращают и 5% будет когда функция ничего не возвращает. Пример 5%
 // Напиши функцию logItems(items) для перебора и логирования массива
-
 
 // const logItems = function (items) {
 //     for (const item of items) {
@@ -252,8 +250,8 @@
 // logItems(['клавиатура', 'наушники', 'часы'])
 
 /*
-* Задача 3
-*/
+ * Задача 3
+ */
 // Напиши функцию findlogin(alllogins, login) для поиска логина
 // - если логина нет, вывести сообщение 'Пользователь [логин] не найден.'
 // - если нашли логин, вывести сообщение 'Пользователь [логин] найден.'
@@ -276,8 +274,8 @@
 // console.log(findlogin(logins, 'asddfgfg'));
 
 /*
-* Пример через тернарный оператор
-*/
+ * Пример через тернарный оператор
+ */
 // const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
 
 // const findlogin = function (alllogins, loginToFind) {
@@ -311,8 +309,8 @@
 // console.log(findlogin(logins, 'asddfgfg'));const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
 
 /*
-* Пример через тернарный оператор
-*/
+ * Пример через тернарный оператор
+ */
 // const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
 
 // const findlogin = function (alllogins, loginToFind) {
@@ -339,8 +337,8 @@
 // а потом в одном большом файле вы будете это все вызывать
 
 /*
-* Задача 4
-*/
+ * Задача 4
+ */
 // Напиши функцию fingSmallesNumber(numbers) для поиска самого маленького числа в массиве
 // При условии что числа уникальные (не повторяются)
 
@@ -361,8 +359,8 @@
 // console.log(findSmallesNumber([7, 21, 84, 15, 4]));
 
 /*
-* Задача 5
-*/
+ * Задача 5
+ */
 // напишите функцию changeCase(string) которая заменяет регистр
 // каждого символа на противоположный
 // Например, если строка "JavaScript", то на выходе должна быть строка "jAVAsCRIPT"
@@ -378,7 +376,7 @@
 //             ? letter.toUpperCase()
 //             : letter.toLowerCase();
 //     }
-    
+
 // return invertedString;
 // };
 
@@ -398,8 +396,8 @@
 // если ты плохо называешь свои переменные то твой код не читаеться другими разработчиками
 
 /*
-* Задача 6
-*/
+ * Задача 6
+ */
 // Напиши функцию slugify(string) которая получает строку и возвращает URL-slug
 // Строка состоит только из букв и пробелов
 
@@ -424,8 +422,8 @@
 // Array.from () - это переводиться дословно сделай массив из. Это устаревший метд
 
 /*
-* Современный метод (...)
-*/
+ * Современный метод (...)
+ */
 // Современный метод ... три точки и ияме переменно
 // const Fn = function (...args) {
 //     console.log(args);
@@ -448,8 +446,8 @@
 // первый аргумент был записан в параментр а это слово а второй аргумент был записан в переменную args как массив
 
 /*
-* Задача 7
-*/
+ * Задача 7
+ */
 // Напиши функцию add для сложения произвольного количества аргументов (чисел)
 // операция (...rest)
 
@@ -469,8 +467,8 @@
 // console.log(add(1, 2, 4, 5, 6));
 
 /*
-* Задача 8
-*/
+ * Задача 8
+ */
 // Напиши функцию filterNumbers(array [, number1, ...]) которая:
 // - первым аргментом принимает массив чисел
 // - после первого аргумента может быть произвольное количество других аргументов
@@ -517,7 +515,7 @@
 //         total += item
 //     }
 //     return total
-    
+
 // }
 // const r1 = calculateTotalPrice([1, 2, 3])
 // console.log(`Общая сумма покупок ${r1}`)
@@ -533,45 +531,41 @@
 
 // logItems(['Mango', 'Kiwi', 'Poly', 'Ajax'])
 
-
-const logins = ['Mango', 'Kiwi', 'Poly', 'Ajax']
+const logins = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
 
 const findLogin = function (alllogins, loginToFind) {
-    for (const login of alllogins) {
+  for (const login of alllogins) {
     if (login === loginToFind) {
-    return `Пользователь ${loginToFind} найден`
+      return `Пользователь ${loginToFind} найден`;
     }
-    }
-    return `Пользователь ${loginToFind} не найден`
-}
-    
-console.log(findLogin(logins, 'Mango'))
-console.log(findLogin(logins, 'Mango1'))
-console.log(findLogin(logins, 'Poly'))
-console.log(findLogin(logins, 'Mango2'))
+  }
+  return `Пользователь ${loginToFind} не найден`;
+};
 
+console.log(findLogin(logins, 'Mango'));
+console.log(findLogin(logins, 'Mango1'));
+console.log(findLogin(logins, 'Poly'));
+console.log(findLogin(logins, 'Mango2'));
 
 const findSmallesNumber = function (numbers) {
-    let smalesNumber = numbers[0]
+  let smalesNumber = numbers[0];
 
-    for (const number of numbers) {
-     if(number < smalesNumber) {
-        smalesNumber = number
-     }
+  for (const number of numbers) {
+    if (number < smalesNumber) {
+      smalesNumber = number;
     }
+  }
 
-    return smalesNumber
-}
+  return smalesNumber;
+};
 
-console.log(findSmallesNumber([3, 8, 12, -2, 15]))
-
+console.log(findSmallesNumber([3, 8, 12, -2, 15]));
 
 const slugify = function (string) {
-    return string.toLowerCase().split(' ').join('-')
-}
+  return string.toLowerCase().split(' ').join('-');
+};
 
-console.log(slugify('Top 18 benefits of React framework'))
-
+console.log(slugify('Top 18 benefits of React framework'));
 
 // ...rest операция рэст - она берет несколько элементов и собирает их в массив
 
@@ -582,7 +576,7 @@ console.log(slugify('Top 18 benefits of React framework'))
 //     for (const arg of args) {
 //     total += arg
 //     }
-   
+
 //     return total
 // }
 
@@ -590,20 +584,36 @@ console.log(slugify('Top 18 benefits of React framework'))
 // console.log(add(1, 2, 3, 4))
 
 const falterNumbers = function (array, ...args) {
-    console.log(array)
-    console.log(args)
-    const uniqueElements = []
+  console.log(array);
+  console.log(args);
+  const uniqueElements = [];
 
-    for (const element of array) {
-        console.log(element)
-        if (args.includes(element)) {
-            uniqueElements.push(element)
-            console.log(`${element} есть везде!`)
-        }
+  for (const element of array) {
+    console.log(element);
+    if (args.includes(element)) {
+      uniqueElements.push(element);
+      console.log(`${element} есть везде!`);
     }
-    return uniqueElements
+  }
+  return uniqueElements;
+};
 
-}
+console.log(falterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8));
+console.log(falterNumbers([10, 15, 25, 30], 23, 30, 18, 15));
 
-console.log(falterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8))
-console.log(falterNumbers([10, 15, 25, 30], 23, 30, 18, 15))
+
+// 1 шаг обьявить функцию 2 шаг вызвать ее
+// обьявили функцию но без вызова
+// тут мы обьявили функциональное выражение
+const add = function (a, b) {
+  //в скобках обьявляете параметры
+
+  //это локальные переменные которые доступны только внутри тела этой функции т исользуеться только во воремя вызова
+    console.log('Выполняеться функция add');
+    console.log(a + b)
+    return a + b
+};
+
+// вызов функции или инструкция вызова функции
+add(5, 10); //аргументы это значения для параметров
+add(1, 1)
